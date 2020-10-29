@@ -9,28 +9,23 @@ body{
     color: white;
 }
 h1{
-    font-weight: 700;
-    text-align: center;   
+    font-weight: 700; 
     letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    text-transform: uppercase;    
 }
-.bar-chart {
-    width: 80%;
-    margin: 15px auto;
-  }
+.top-heading{
+    margin: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   .top-container,
-  .middle-containers{
+  .middle-containers,
+  .bottom-containers{
       margin: 2rem;
   }
-  .top-container{   
-  
-  }
-  .top-container h1{
-      display: flex;
-      justify-items: center;
-  }
+
   .middle-containers{  
     color: black;   
   }
@@ -38,4 +33,15 @@ h1{
   .cmd-2,
   .cmd-3{
       margin-bottom: 2rem;
+  }
+  .pie-chart{
+    width: 750px;
+    height: auto;
+  }
+  .sales-chart{
+      
+  }
+  /****CARD*****/
+  .card-header{
+      color: #26484C;      
   }
