@@ -85,8 +85,57 @@ gradientBarChartConfiguration = {
   }
 };
 
+gradientChartOptionsConfigurationWithTooltipPurple = {
+  maintainAspectRatio: false,
+  legend: {
+    display: false
+  },
 
-var ctx = document.getElementById("salesByCountryChart").getContext("2d");
+  tooltips: {
+    backgroundColor: '#f5f5f5',
+    titleFontColor: '#333',
+    bodyFontColor: '#666',
+    bodySpacing: 4,
+    xPadding: 12,
+    mode: "nearest",
+    intersect: 0,
+    position: "nearest"
+  },
+  responsive: true,
+  scales: {
+    yAxes: [{
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(29,140,248,0.0)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        suggestedMin: 60,
+        suggestedMax: 125,
+        padding: 20,
+        fontColor: "#9a9a9a"
+      }
+    }],
+
+    xAxes: [{
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(225,78,202,0.1)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        padding: 20,
+        fontColor: "#9a9a9a"
+      }
+    }]
+  }
+};
+
+// Bar Chart Sales Performance
+
+var ctx = document.getElementById("salesByCountryBar").getContext("2d");
 
 var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
@@ -108,7 +157,7 @@ var myChart = new Chart(ctx, {
       fill: true,
      
       hoverBackgroundColor: gradientStroke,
-      
+
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -131,3 +180,83 @@ var myChart = new Chart(ctx, {
   },
   options: gradientBarChartConfiguration
 });
+
+// Pie chart Sales Chanel
+
+var ctx = document.getElementById("salesChanelPie").getContext("2d");
+
+var myPieChart = new Chart(ctx, {
+  type: 'pie',
+  responsive: true,
+  data: {
+    labels: ['ONLINE', 'OFFLINE', 'BIDDING ROUND', 'ONLINE AUCKTION'],
+    datasets: [{
+      label: "Sales Type",
+      fill: true,
+     
+   
+
+      backgroundColor: [
+        '#ff9f40',
+        '#4bc0c0',
+        '#ff6384',
+        '#ffcd56'
+    ],
+    borderColor: [
+        '#ff9f40',
+        '#4bc0c0',
+        '#ff6384',
+        '#ffcd56'
+    ],
+      borderWidth: 2,
+      borderDash: [],
+      borderDashOffset: 0.0,
+      data: [45,25,15,15],
+    }]
+  },
+});
+
+
+// Line Chart Purple
+
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: data
+});
+
+
+var ctx = document.getElementById("chartLinePurple").getContext("2d");
+
+var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
+gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
+gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+
+var data = {
+  labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+  datasets: [{
+    label: "Data",
+    fill: true,
+    backgroundColor: gradientStroke,
+    borderColor: '#d048b6',
+    borderWidth: 2,
+    borderDash: [],
+    borderDashOffset: 0.0,
+    pointBackgroundColor: '#d048b6',
+    pointBorderColor: 'rgba(255,255,255,0)',
+    pointHoverBackgroundColor: '#d048b6',
+    pointBorderWidth: 20,
+    pointHoverRadius: 4,
+    pointHoverBorderWidth: 15,
+    pointRadius: 4,
+    data: [80, 100, 70, 80, 120, 80],
+  }]
+};
+
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: gradientChartOptionsConfigurationWithTooltipPurple
+});
+

@@ -21,14 +21,16 @@
      <div class="row top-top">
       <div class="col-lg-4">
         <div class="card top-card">
-            <div class="card-header">
-                <h1>Sales Chanel</h1>
+          <div class="card-header">
+            <h1>Total Shipments</h1>
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="chartLinePurple" width="747" height="276"></canvas>
             </div>
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos labore facere minus aspernatur, nam, deserunt consectetur doloremque architecto veritatis illum dolorum impedit quam nostrum ipsa voluptatibus modi eius</p>
-            </div>
-            </div>
-    </div>
+          </div>
+        </div>
+      </div>
     <div class="col-lg-4">
       <div class="card top-card">
           <div class="card-header">
@@ -55,7 +57,7 @@
     <div class="col-lg-6 col-md-12">
       <div class="card ">
         <div class="card-header">
-          <h1>Sales Performance</h1>
+          <h1>Sales By Country</h1>
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -87,7 +89,7 @@
                   <td>
                     Nicolai Høge Pedersen
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 55,788
                   </td>                 
                 </tr>
@@ -101,7 +103,7 @@
                   <td>
                     Kevin Petersen
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 40,788
                   </td>                 
                 </tr>
@@ -115,7 +117,7 @@
                   <td>
                     Lars Høge Mortensen
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 36,738
                   </td>                 
                 </tr>
@@ -129,7 +131,7 @@
                   <td>
                     Christopher Henry Gayle
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 25,000
                   </td>                 
                 </tr>
@@ -143,7 +145,7 @@
                   <td>
                     Moisis Henriques
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 48,550
                   </td>                 
                 </tr>
@@ -157,11 +159,10 @@
                   <td>
                     David Warner
                   </td>
-                  <th class="text-right"> 
+                  <td class="text-right"> 
                     DKK 29,550
                   </td>                 
-                </tr>
-       
+                </tr>     
                 
               </tbody>
             </table>
@@ -176,16 +177,27 @@
         </div>
         <div class="card-body">
           <div class="chart-area">
-            <canvas id="salesByCountryChart" width="747" height="366"></canvas>
+            <canvas id="salesByCountryBar" width="747" height="366"></canvas>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
 
-     <div class="row middle-containers">
-       <div class="col-lg-8"> 
+     <div class="row bottom-containers">
+      <div class="col-lg-6 col-md-12">
+        <div class="card card-bottom">
+          <div class="card-header">
+            <h1 class="card-category">Sale Type</h1>         
+          </div>
+          <div class="card-body">
+            <div class="chart-area">
+              <canvas id="salesChanelPie" width="747" height="366"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="col-lg-6 col-md-12"> 
          <div class="card card-bottom">
           <div class="card-header">
             <h1>Coming Auctions</h1>
@@ -248,17 +260,8 @@
        </div>      
     </div>
    </div> 
-   <div class="col-lg-4">
-    <div class="card card-chart card-bottom">
-        <div class="card-header">
-            <h1>Sales Chanel</h1>
-        </div>
-        <div class="card-body">
-          <img src="./assets/images/piechart.png" alt="sales-image" class="sales-chart">
-        </div>
-        </div>
-</div>
-      <!---Bottom Containers-->
+    
+  
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>

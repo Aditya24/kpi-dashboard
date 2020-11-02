@@ -1,110 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+/** @format */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'system-ui', serif;
-    background: linear-gradient(#1e1e2f, #1e1e24);
-    color: white;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "system-ui", serif;
+  background: linear-gradient(#1e1e2f, #1e1e24);
+  color: white;
+}
 
 .card-header,
-.top-heading{
-    font-family: 'Montserrat', sans-serif;
+.top-heading {
+  font-family: "Montserrat", sans-serif;
 }
-h1{
-    font-weight: 700; 
-    text-transform: uppercase;    
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.top-heading{
-    margin: 2rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.top-heading {
+  margin: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  .top-container,
-  .middle-containers,
-  .bottom-containers,
-  .top-top{
-      margin: 2rem;
-  }
+.top-container,
+.middle-containers,
+.bottom-containers,
+.top-top {
+  margin: 2rem;
+}
 
-  .middle-containers,
-  .card-body{  
-    color: black;   
-  }
-  .cmd-1,
-  .cmd-2,
-  .cmd-3{
-      margin-bottom: 2rem;
-  }
-  .pie-chart{
-    width: 750px;
-    height: auto;
-  }
-  .sales-chart{
-      
-  }
-  /****CARD*****/
-  .card{
-      background: #27293d;
-     
-  }
-  .card-header{
-    /*color: #0076a7;*/
-    color: #d4d4d4;
-    background: linear-gradient( #0076a7, #3a3a3a); /*linear-gradient( #0076a7, #000000);*/    
-    border-bottom: none;
-  }
-  .card-body{
-    color: white;
-  }
-.top-card{
-    margin-top: 1rem;
+.middle-containers,
+.card-body {
+  color: black;
 }
-.card-bottom{
-    margin-top: 1rem;
+.cmd-1,
+.cmd-2,
+.cmd-3 {
+  margin-bottom: 2rem;
 }
-.md-container-height{
-    height: 450px;
+.pie-chart {
+  width: 750px;
+  height: auto;
 }
+.sales-chart {
+}
+/****CARD*****/
+.card {
+  background: #27293d;
+}
+.card-header {
+  /*color: #0076a7;*/
+  color: #d4d4d4;
+  background: linear-gradient(
+    #0076a7,
+    #3a3a3a
+  ); /*linear-gradient( #0076a7, #000000);*/
+  border-bottom: none;
+}
+.card-body {
+  color: white;
+}
+.top-card {
+  margin-top: 1rem;
+}
+.card-bottom {
+  margin-top: 1rem;
+}
+
 /**Auction Items**/
-.auction-item{
-    text-align: center;
+.auction-item {
+  text-align: center;
 }
 .auction-image,
 .auction-title,
 .when,
-.where{
-   margin-top: 1rem;
+.where {
+  margin-top: 1rem;
 }
-.where{
-    color: crimson;
+.where {
+  color: crimson;
 }
-.auction-text{
-    font-size: 1.5rem;
+.auction-text {
+  font-size: 1.5rem;
 }
-.auction-title{
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+.auction-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
-.when, .where{
-    font-weight: bold;
-    font-size: 1.8rem;
+.when,
+.where {
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 
 /**************TABLE********************/
-.flag-icon{
-    font-size: 2rem;
+.table {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-.table td, .table th {
-    padding: 8px;
+.flag-icon {
+  font-size: 3rem;
+}
+.table td,
+.table th {
+  padding: 8px;
 }
