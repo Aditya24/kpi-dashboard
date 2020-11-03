@@ -45,14 +45,13 @@ h1 {
   margin-bottom: 2rem;
 }
 .pie-chart {
-  width: 750px;
-  height: auto;
 }
 .sales-chart {
 }
 /****CARD*****/
 .card {
   background: #27293d;
+  color: #d346b1;
 }
 .card-header {
   /*color: #0076a7;*/

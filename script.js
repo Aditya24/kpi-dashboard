@@ -1,140 +1,203 @@
-/*
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-            ],
-            borderWidth: 1
+demo = {
+  initDocChart: function() {
+    chartColor = "#FFFFFF";
+    // General configuration for the charts with Line gradientStroke
+    gradientChartOptionsConfiguration = {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+      tooltips: {
+        bodySpacing: 4,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest",
+        xPadding: 10,
+        yPadding: 10,
+        caretPadding: 10
+      },
+      responsive: true,
+      scales: {
+        yAxes: [{
+          display: 0,
+          gridLines: 0,
+          ticks: {
+            display: false
+          },
+          gridLines: {
+            zeroLineColor: "transparent",
+            drawTicks: false,
+            display: false,
+            drawBorder: false
+          }
+        }],
+        xAxes: [{
+          display: 0,
+          gridLines: 0,
+          ticks: {
+            display: false
+          },
+          gridLines: {
+            zeroLineColor: "transparent",
+            drawTicks: false,
+            display: false,
+            drawBorder: false
+          }
         }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0,
+          top: 15,
+          bottom: 15
         }
-    }
-});
-
-*/
-
-gradientBarChartConfiguration = {
-  maintainAspectRatio: false,
-  legend: {
-    display: false
-  },
-
-  tooltips: {
-    backgroundColor: '#f5f5f5',
-    titleFontColor: '#333',
-    bodyFontColor: '#666',
-    bodySpacing: 4,
-    xPadding: 12,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest"
-  },
-  responsive: true,
-  scales: {
-    yAxes: [{
-
-      gridLines: {
-        drawBorder: false,
-        color: 'rgba(29,140,248,0.1)',
-        zeroLineColor: "transparent",
-      },
-      ticks: {
-        suggestedMin: 60,
-        suggestedMax: 120,
-        padding: 20,
-        fontColor: "#9e9e9e"
       }
-    }],
-
-    xAxes: [{
-
-      gridLines: {
-        drawBorder: false,
-        color: 'rgba(29,140,248,0.1)',
-        zeroLineColor: "transparent",
-      },
-      ticks: {
-        padding: 20,
-        fontColor: "#9e9e9e"
-      }
-    }]
-  }
-};
-
-gradientChartOptionsConfigurationWithTooltipPurple = {
-  maintainAspectRatio: false,
-  legend: {
-    display: false
+    };
   },
-
-  tooltips: {
-    backgroundColor: '#f5f5f5',
-    titleFontColor: '#333',
-    bodyFontColor: '#666',
-    bodySpacing: 4,
-    xPadding: 12,
-    mode: "nearest",
-    intersect: 0,
-    position: "nearest"
-  },
-  responsive: true,
-  scales: {
-    yAxes: [{
-      barPercentage: 1.6,
-      gridLines: {
-        drawBorder: false,
-        color: 'rgba(29,140,248,0.0)',
-        zeroLineColor: "transparent",
+  initDashboardPageCharts: function() {
+    gradientBarChartConfiguration = {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
       },
-      ticks: {
-        suggestedMin: 60,
-        suggestedMax: 125,
-        padding: 20,
-        fontColor: "#9a9a9a"
-      }
-    }],
-
-    xAxes: [{
-      barPercentage: 1.6,
-      gridLines: {
-        drawBorder: false,
-        color: 'rgba(225,78,202,0.1)',
-        zeroLineColor: "transparent",
+    
+      tooltips: {
+        backgroundColor: '#f5f5f5',
+        titleFontColor: '#333',
+        bodyFontColor: '#666',
+        bodySpacing: 4,
+        xPadding: 12,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest"
       },
-      ticks: {
-        padding: 20,
-        fontColor: "#9a9a9a"
+      responsive: true,
+      scales: {
+        yAxes: [{
+    
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(29,140,248,0.1)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            suggestedMin: 60,
+            suggestedMax: 120,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }],
+    
+        xAxes: [{
+    
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(29,140,248,0.1)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }]
       }
-    }]
-  }
-};
+    };
+    gradientChartOptionsConfigurationWithTooltipPurple = {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
+    
+      tooltips: {
+        backgroundColor: '#f5f5f5',
+        titleFontColor: '#333',
+        bodyFontColor: '#666',
+        bodySpacing: 4,
+        xPadding: 12,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest"
+      },
+      responsive: true,
+      scales: {
+        yAxes: [{
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(29,140,248,0.0)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            suggestedMin: 60,
+            suggestedMax: 125,
+            padding: 20,
+            fontColor: "#9a9a9a"
+          }
+        }],
+    
+        xAxes: [{
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(225,78,202,0.1)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9a9a9a"
+          }
+        }]
+      }
+    };
+    gradientChartOptionsConfigurationWithTooltipGreen = {
+      maintainAspectRatio: false,
+      legend: {
+        display: false
+      },
 
-// Bar Chart Sales Performance
+      tooltips: {
+        backgroundColor: '#f5f5f5',
+        titleFontColor: '#333',
+        bodyFontColor: '#666',
+        bodySpacing: 4,
+        xPadding: 12,
+        mode: "nearest",
+        intersect: 0,
+        position: "nearest"
+      },
+      responsive: true,
+      scales: {
+        yAxes: [{
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(29,140,248,0.0)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            suggestedMin: 50,
+            suggestedMax: 125,
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }],
 
+        xAxes: [{
+          barPercentage: 1.6,
+          gridLines: {
+            drawBorder: false,
+            color: 'rgba(0,242,195,0.1)',
+            zeroLineColor: "transparent",
+          },
+          ticks: {
+            padding: 20,
+            fontColor: "#9e9e9e"
+          }
+        }]
+      }
+    };
+    
 var ctx = document.getElementById("salesByCountryBar").getContext("2d");
 
 var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
@@ -193,9 +256,6 @@ var myPieChart = new Chart(ctx, {
     datasets: [{
       label: "Sales Type",
       fill: true,
-     
-   
-
       backgroundColor: [
         '#ff9f40',
         '#4bc0c0',
@@ -225,13 +285,13 @@ var myChart = new Chart(ctx, {
 });
 
 
-var ctx = document.getElementById("chartLinePurple").getContext("2d");
+var ctx = document.getElementById("chartLineGreen").getContext("2d");
 
 var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
-gradientStroke.addColorStop(1, 'rgba(72,72,176,0.2)');
-gradientStroke.addColorStop(0.2, 'rgba(72,72,176,0.0)');
-gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+gradientStroke.addColorStop(1, 'rgba(66,134,121,0.15)');
+gradientStroke.addColorStop(0.4, 'rgba(84, 129, 121, 0.335)'); //green colors
+gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
 var data = {
   labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
@@ -239,13 +299,13 @@ var data = {
     label: "Data",
     fill: true,
     backgroundColor: gradientStroke,
-    borderColor: '#d048b6',
+    borderColor:'#00d6b4',
     borderWidth: 2,
     borderDash: [],
     borderDashOffset: 0.0,
-    pointBackgroundColor: '#d048b6',
-    pointBorderColor: 'rgba(255,255,255,0)',
-    pointHoverBackgroundColor: '#d048b6',
+    pointBackgroundColor:'#00d6b4',
+    pointBorderColor:'rgba(255,255,255,0)',
+    pointHoverBackgroundColor: '#00d6b4',
     pointBorderWidth: 20,
     pointHoverRadius: 4,
     pointHoverBorderWidth: 15,
@@ -257,6 +317,73 @@ var data = {
 var myChart = new Chart(ctx, {
   type: 'line',
   data: data,
-  options: gradientChartOptionsConfigurationWithTooltipPurple
+  options: gradientChartOptionsConfigurationWithTooltipGreen
 });
 
+/******BIG Chart************** */
+ var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+    var chart_data = [100, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100];
+    
+
+
+    var ctx = document.getElementById("chartBig1").getContext('2d');
+
+    var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+    gradientStroke.addColorStop(1, 'rgba(72,72,176,0.1)');
+    gradientStroke.addColorStop(0.4, 'rgba(211, 70, 178, 0.274)');
+    gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
+    var config = {
+      type: 'line',
+      data: {
+        labels: chart_labels,
+        datasets: [{
+          label: "Total sales",
+          fill: true,
+          backgroundColor: gradientStroke,
+          borderColor: '#d346b1',
+          borderWidth: 2,
+          borderDash: [],
+          borderDashOffset: 0.0,
+          pointBackgroundColor: '#d346b1',
+          pointBorderColor: 'rgba(255,255,255,0)',
+          pointHoverBackgroundColor: '#d346b1',
+          pointBorderWidth: 20,
+          pointHoverRadius: 4,
+          pointHoverBorderWidth: 15,
+          pointRadius: 4,
+          data: chart_data,
+        }]
+      },
+      options: gradientChartOptionsConfigurationWithTooltipPurple
+    };
+    var myChartData = new Chart(ctx, config);
+    $("#0").click(function() {
+      var data = myChartData.config.data;
+      data.datasets[0].data = chart_data;
+      data.labels = chart_labels;
+      myChartData.update();
+    });
+    $("#1").click(function() {
+      var chart_data = [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120];
+      var data = myChartData.config.data;
+      data.datasets[0].data = chart_data;
+      data.labels = chart_labels;
+      myChartData.update();
+    });
+
+    $("#2").click(function() {
+      var chart_data = [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
+      var data = myChartData.config.data;
+      data.datasets[0].data = chart_data;
+      data.labels = chart_labels;
+      myChartData.update();
+    });
+
+  },
+};
+
+// Generl configuration for Line Charts 
+
+
+// Bar Chart Sales Performance
