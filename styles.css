@@ -44,14 +44,10 @@ h1 {
 .cmd-3 {
   margin-bottom: 2rem;
 }
-.pie-chart {
-}
-.sales-chart {
-}
+
 /****CARD*****/
 .card {
   background: #27293d;
-  color: #d346b1;
 }
 .card-header {
   /*color: #0076a7;*/
@@ -112,4 +108,30 @@ h1 {
 .table td,
 .table th {
   padding: 8px;
+}
+
+/****Button Colors***************************************************/
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #3488a9;
+  font-size: 20px;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: #2a4a57;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: #ffffff;
+  background-color: #2a4a57;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #ffffff;
+  background-color: #2a4a57;
 }
