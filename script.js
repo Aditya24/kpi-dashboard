@@ -85,7 +85,7 @@ demo = {
             suggestedMin: 60,
             suggestedMax: 120,
             padding: 20,
-            fontColor: "#a9a9a9",
+            fontColor: "#9e9e9e",
             fontSize: 20,
           }
         }],
@@ -99,7 +99,7 @@ demo = {
           },
           ticks: {
             padding: 20,
-             fontColor: "#a9a9a9",
+             fontColor: "#9e9e9e",
             fontSize: 20
           }
         }]
@@ -163,7 +163,7 @@ var gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
 
 gradientStroke.addColorStop(1, 'rgba(29,140,248,0.2)');
 gradientStroke.addColorStop(0.4, 'rgba(29,140,248,0.0)');
-gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); //blue colors
+gradientStroke.addColorStop(0, 'rgba(29,140,248,0)'); 
 
 
 var myChart = new Chart(ctx, {
@@ -205,7 +205,8 @@ var myChart = new Chart(ctx, {
 
 // Pie chart Sales Chanel
 
-var ctx = document.getElementById("salesChanelPie").getContext("2d");
+var ctx = document.getElementById("pieChart").getContext("2d");
+Chart.defaults.global.defaultFontSize = 30;
 
 var myPieChart = new Chart(ctx, {
   type: 'pie',
@@ -216,27 +217,32 @@ var myPieChart = new Chart(ctx, {
       label: "Sales Type",
       fill: true,
       backgroundColor: [
-        '#ff9f40',
-        '#4bc0c0',
-        '#ff6384',
-        '#ffcd56'
+        '#43d5d6',
+        '#ffaf2b',
+        '#f97c4c',
+        '#ed143d'
     ],
     borderColor: [
-        '#ff9f40',
-        '#4bc0c0',
-        '#ff6384',
-        '#ffcd56'
+      '#43d5d6',
+      '#ffaf2b',
+      '#f97c4c',
+      '#ed143d'
     ],
-      borderWidth: 2,
-      borderDash: [],
-      borderDashOffset: 0.0,
-      data: [45,25,15,15],
+      borderWidth: 2,     
+      data: [45,25,15,15],    
     }]
-  },
+  },  
 });
 
 
-// Line Chart Purple
+
+
+
+
+
+
+
+// Line Chart 
 
 var myChart = new Chart(ctx, {
   type: 'line',
