@@ -21,13 +21,7 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
 }
-.top-heading {
-  margin: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .top-container,
 .middle-containers,
 .bottom-containers,
@@ -116,6 +110,7 @@ h1 {
   color: #ffffff;
   background-color: #3488a9;
   font-size: 20px;
+  border-color: #3488a9;
 }
 
 .btn-primary:hover {
