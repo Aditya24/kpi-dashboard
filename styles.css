@@ -83,7 +83,8 @@ i {
   margin-top: 1rem;
 }
 .where {
-  color: crimson;
+  color: #2eaf05;
+  font-weight: 800;
 }
 
 .auction-title {

@@ -203,6 +203,7 @@ var myChart = new Chart(ctx, {
   options: gradientBarChartConfiguration
 });
 
+
 // Pie chart Sales Chanel
 
 var ctx = document.getElementById("pieChart").getContext("2d");
@@ -231,7 +232,7 @@ var myPieChart = new Chart(ctx, {
       borderWidth: 2,     
       data: [45,25,15,15],    
     }]
-  },  
+  },
 });
 
 
@@ -289,7 +290,6 @@ var myChart = new Chart(ctx, {
  var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     var chart_data =  [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130];
     
-
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
 
